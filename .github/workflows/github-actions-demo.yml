@@ -1,0 +1,11 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sudo apt-get -y install vagrant
+      - run: vagrant plugin list
+      - run: vagrant init debian/jessie64
+      - run: vagrant up
